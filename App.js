@@ -6,6 +6,7 @@ import Navigate from './navigate';
 const loadingFonts = () => Font.loadAsync({
   'mt-bold': require('./assets/fonts/Montserrat-Bold.ttf'),
   'mt-light': require('./assets/fonts/Montserrat-Light.ttf'),
+  'mt-italic': require('./assets/fonts/Montserrat-Italic.ttf'),
 });
 
 export default function App() {
@@ -37,7 +38,7 @@ export default function App() {
 
   return (
 
-    <Navigate onLayout={onLayoutRootView} />
+    <Navigate onLayout={onLayoutRootView}/>
   );
 }
 

@@ -16,7 +16,7 @@ export default function Navigate() {
                     { 
                         title: 'Главная', 
                         headerStyle:{backgroundColor: 'green', height:100},
-                        headerTitleStyle: {fontSize: 26}
+                        headerTitleStyle: {fontSize: 26, fontWeight:'400'}
                     }
                 }
             />
@@ -25,7 +25,7 @@ export default function Navigate() {
                 component={FullInfo}
                 options={
                     { 
-                        title: 'Статьи', 
+                        title: 'Статья', 
                         headerStyle:{backgroundColor: 'green', height:100},
                         headerTitleStyle: {fontSize: 26}
                     }
