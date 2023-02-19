@@ -29,20 +29,28 @@ export const Main = ({ onLayout, navigation }) => {
 
     const addArticle = (article) => {
         setArticles((list) => {
-            article.id = Math.random().toString();
+            // article.id = Math.random().toString();
             return [
                 article,
                 ...list
             ]
         });
         setModalView(false);
+        console.log(article);
+        axios.post('https://63ef49ac271439b7fe6b71eb.mockapi.io/api/articles/articles', article)
+        .then(res => {
+            console.log('res',res);
+            console.log(res.data);
+        })
     }
+
     const truncateTitle = (str) => {
         if (str.length > 65) {
             return str.substring(0, 65) + '...';
         }
         return str;
     }
+
     if (isLoading) {
         return <View style={{
             flex: 1,

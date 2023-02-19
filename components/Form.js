@@ -24,7 +24,7 @@ export default function Form({ addArticle }) {
         console.log(result)
         if (!result.canceled) {
             setImage(result.assets[0].uri);
-            handleChange(result)
+            handleChange(result.uri)
         }
     };
     return (
